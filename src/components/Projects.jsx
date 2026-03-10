@@ -20,7 +20,8 @@ const projects = [
         title: "RM-Kart Shopping App",
         description: "An interactive e-commerce platform featuring product listings, cart functionality, and a seamless checkout experience.",
         tags: ["React", "E-commerce", "Web App"],
-        github: "https://github.com/Samxxr007/RM-Kart-Shopping-App"
+        github: "https://github.com/Samxxr007/RM-Kart-Shopping-App",
+        deploy: "https://rm-kart-shopping-app.vercel.app"
     },
     {
         title: "CityClean360",
