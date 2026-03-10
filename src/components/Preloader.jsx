@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const TARGET_NAME = "SAMEER AHMED G.";
+const TARGET_NAME = "SAMEER AHMED G";
 const TARGET_SUB = "ASPIRING SOFTWARE ENGINEER";
 const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$!%&*?<>[]{}";
 
@@ -83,9 +83,9 @@ export default function Preloader({ onComplete }) {
                                 className="h-[1px] bg-gradient-to-r from-transparent via-[color:var(--color-accent)] to-transparent mb-12"
                             />
 
-                            {/* Main Name - Optimized for legibility */}
+                            {/* Main Name - Optimized for fluid responsiveness */}
                             <motion.h1
-                                className={`text-5xl md:text-[9rem] font-black tracking-tight text-center leading-none transition-all duration-700 font-mono whitespace-pre ${isDecoded ? 'text-white' : 'text-slate-600'}`}
+                                className={`text-4xl sm:text-6xl md:text-[9rem] font-black tracking-tighter text-center leading-none transition-all duration-700 font-mono ${isDecoded ? 'text-white' : 'text-slate-600'}`}
                             >
                                 {nameText.split("").map((char, i) => (
                                     <motion.span
@@ -100,12 +100,12 @@ export default function Preloader({ onComplete }) {
                                 ))}
                             </motion.h1>
 
-                            {/* Designation Subtext - High contrast */}
+                            {/* Designation Subtext - High contrast & responsive tracking */}
                             <motion.div
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.2 }}
-                                className={`mt-6 text-xl md:text-2xl font-bold tracking-[0.5em] transition-all duration-700 whitespace-pre ${isDecoded ? 'text-white' : 'text-slate-700'}`}
+                                className={`mt-6 text-[10px] sm:text-sm md:text-2xl font-bold tracking-[0.3em] sm:tracking-[0.5em] transition-all duration-700 text-center ${isDecoded ? 'text-white' : 'text-slate-700'}`}
                             >
                                 {subText.split("").map((char, i) => (
                                     <motion.span
