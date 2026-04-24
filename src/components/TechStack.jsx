@@ -5,32 +5,32 @@ const skillGroups = [
     {
         title: "Frontend Development",
         icon: <Globe size={24} />,
-        skills: ["HTML", "CSS", "JavaScript", "React"]
+        skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js 14"]
     },
     {
-        title: "Mobile Development",
+        title: "Mobile & UI/UX",
         icon: <Layout size={24} />,
-        skills: ["React Native"]
+        skills: ["React Native", "Tailwind CSS", "Material-UI", "Framer Motion"]
     },
     {
-        title: "Backend & Cloud",
+        title: "Backend & Database",
         icon: <Database size={24} />,
-        skills: ["Node.js", "MongoDB", "Firebase"]
+        skills: ["Node.js", "Express.js", "MongoDB", "Firebase"]
     },
     {
-        title: "Programming Languages",
+        title: "Core Languages",
         icon: <Code2 size={24} />,
-        skills: ["Java", "Python", "C Programming"]
+        skills: ["Java", "Python", "C", "C++"]
     },
     {
-        title: "Development Tools",
+        title: "Tools & Deployment",
         icon: <Terminal size={24} />,
-        skills: ["Vite", "Tailwind CSS", "Git", "GitHub"]
+        skills: ["Git", "GitHub", "Vite", "Vercel", "Render", "Postman"]
     },
     {
-        title: "AI & Productivity",
+        title: "AI & Architecture",
         icon: <Cpu size={24} />,
-        skills: ["ChatGPT"]
+        skills: ["ChatGPT", "GitHub Copilot", "REST APIs", "BFF Patterns"]
     }
 ];
 
