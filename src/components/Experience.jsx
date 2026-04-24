@@ -34,7 +34,7 @@ export default function Experience() {
                                     style={{ color: "var(--color-accent)" }}
                                 >
                                     <Calendar size={16} />
-                                    <span>2024 - Present</span>
+                                    <span>Feb 2026 - Apr 2026</span>
                                 </div>
                             </div>
 
@@ -57,24 +57,24 @@ export default function Experience() {
                                         >
                                             <Briefcase size={20} />
                                         </div>
-                                        <h3 className="text-xl md:text-2xl font-bold text-white">Software Engineer</h3>
+                                        <h3 className="text-xl md:text-2xl font-bold text-white">Web Developer</h3>
                                     </div>
                                     <h4
                                         className="text-lg font-medium mb-4"
                                         style={{ color: "var(--color-accent)" }}
                                     >
-                                        The Skybrisk
+                                        The Skybrisk · Internship
                                     </h4>
                                     <div className="md:hidden flex items-center gap-2 text-slate-400 text-sm mb-4">
                                         <Calendar size={14} />
-                                        <span>2024 - Present</span>
+                                        <span>Feb 2026 - Apr 2026</span>
                                     </div>
                                     <ul
                                         className="space-y-2 text-slate-300 text-sm md:text-base leading-relaxed list-disc list-inside"
                                     >
-                                        <li className="marker:text-[color:var(--color-accent)]">Leading development of modern ERP systems and full-stack solutions.</li>
-                                        <li className="marker:text-[color:var(--color-accent)]">Implementing scalable architectures using React and Node.js.</li>
-                                        <li className="marker:text-[color:var(--color-accent)]">Collaborating on real-world business automation projects.</li>
+                                        <li className="marker:text-[color:var(--color-accent)]">Developed and deployed a comprehensive ERP web application using the MERN stack and Material-UI.</li>
+                                        <li className="marker:text-[color:var(--color-accent)]">Engineered a secure authentication system with role-based access control, enhancing user experience and security.</li>
+                                        <li className="marker:text-[color:var(--color-accent)]">Refactored complex data entry flows, improving workflow efficiency for inventory and order management.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -96,7 +96,7 @@ export default function Experience() {
                                     style={{ color: "var(--color-accent)" }}
                                 >
                                     <Calendar size={16} />
-                                    <span>Mar 2026 - Present</span>
+                                    <span>Feb 2026 - Mar 2026</span>
                                 </div>
                             </div>
 
@@ -119,25 +119,25 @@ export default function Experience() {
                                         >
                                             <Briefcase size={20} />
                                         </div>
-                                        <h3 className="text-xl md:text-2xl font-bold text-white">Full Stack Developer (Lead)</h3>
+                                        <h3 className="text-xl md:text-2xl font-bold text-white">Full Stack Intern</h3>
                                     </div>
                                     <h4
                                         className="text-lg font-medium mb-4"
                                         style={{ color: "var(--color-accent)" }}
                                     >
-                                        RM-Kart (E-commerce Platform)
+                                        RMkart · Internship
                                     </h4>
                                     <div className="md:hidden flex items-center gap-2 text-slate-400 text-sm mb-4">
                                         <Calendar size={14} />
-                                        <span>Mar 2026 - Present</span>
+                                        <span>Feb 2026 - Mar 2026</span>
                                     </div>
                                     <ul
                                         className="space-y-2 text-slate-300 text-sm md:text-base leading-relaxed list-disc list-inside"
                                     >
-                                        <li className="marker:text-[color:var(--color-accent)]">Architected and developed a comprehensive e-commerce shopping app from scratch, featuring dynamic catalogs and checkout flows.</li>
-                                        <li className="marker:text-[color:var(--color-accent)]">Implemented robust state management for cart logic and JWT-based authentication flows.</li>
-                                        <li className="marker:text-[color:var(--color-accent)]">Developed an integrated admin dashboard for order tracking, inventory management, and user oversight.</li>
-                                        <li className="marker:text-[color:var(--color-accent)]">Designed a modern, mobile-first responsive interface utilizing Tailwind CSS.</li>
+                                        <li className="marker:text-[color:var(--color-accent)]">Designed and developed ShopSphere, a full-stack e-commerce marketplace using React/Vite and Node.js.</li>
+                                        <li className="marker:text-[color:var(--color-accent)]">Transitioned the application to a Backend-for-Frontend (BFF) model, enhancing security and scalability.</li>
+                                        <li className="marker:text-[color:var(--color-accent)]">Architected multi-role ecosystems with specialized authorization flows for various user types.</li>
+                                        <li className="marker:text-[color:var(--color-accent)]">Developed a secure Node.js/Express REST API with custom JWT validation and Role-Based Access Control (RBAC).</li>
                                     </ul>
                                 </div>
                             </div>
