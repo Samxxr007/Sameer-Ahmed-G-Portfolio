@@ -81,6 +81,69 @@ export default function Experience() {
                         </div>
                     </motion.div>
 
+                    {/* RM-Kart Experience Item */}
+                    <motion.div
+                        className="relative pl-8 md:pl-0"
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                    >
+                        <div className="md:grid md:grid-cols-5 md:gap-8 items-start">
+                            <div className="hidden md:flex flex-col items-end col-span-1 pt-1">
+                                <div
+                                    className="flex items-center gap-2 text-sm font-medium"
+                                    style={{ color: "var(--color-accent)" }}
+                                >
+                                    <Calendar size={16} />
+                                    <span>Mar 2026 - Present</span>
+                                </div>
+                            </div>
+
+                            <div className="md:col-span-4 relative">
+                                {/* Timeline dot */}
+                                <div
+                                    className="absolute -left-10 md:-left-[2.5rem] top-1 h-5 w-5 rounded-full border-4 border-slate-950 flex items-center justify-center z-10"
+                                    style={{ backgroundColor: "var(--color-accent)" }}
+                                >
+                                    <div className="h-1.5 w-1.5 rounded-full bg-white"></div>
+                                </div>
+                                {/* Timeline line */}
+                                <div className="absolute -left-[2.1rem] top-5 bottom-[-3rem] md:bottom-[-4rem] w-[2px] bg-slate-800"></div>
+
+                                <div className="glass-card p-6 md:p-8 rounded-2xl border border-slate-800/60 bg-slate-900/50">
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <div
+                                            className="p-2 rounded-lg bg-slate-800/80"
+                                            style={{ color: "var(--color-accent)" }}
+                                        >
+                                            <Briefcase size={20} />
+                                        </div>
+                                        <h3 className="text-xl md:text-2xl font-bold text-white">Full Stack Developer (Lead)</h3>
+                                    </div>
+                                    <h4
+                                        className="text-lg font-medium mb-4"
+                                        style={{ color: "var(--color-accent)" }}
+                                    >
+                                        RM-Kart (E-commerce Platform)
+                                    </h4>
+                                    <div className="md:hidden flex items-center gap-2 text-slate-400 text-sm mb-4">
+                                        <Calendar size={14} />
+                                        <span>Mar 2026 - Present</span>
+                                    </div>
+                                    <ul
+                                        className="space-y-2 text-slate-300 text-sm md:text-base leading-relaxed list-disc list-inside"
+                                    >
+                                        <li className="marker:text-[color:var(--color-accent)]">Architected and developed a comprehensive e-commerce shopping app from scratch, featuring dynamic catalogs and checkout flows.</li>
+                                        <li className="marker:text-[color:var(--color-accent)]">Implemented robust state management for cart logic and JWT-based authentication flows.</li>
+                                        <li className="marker:text-[color:var(--color-accent)]">Developed an integrated admin dashboard for order tracking, inventory management, and user oversight.</li>
+                                        <li className="marker:text-[color:var(--color-accent)]">Designed a modern, mobile-first responsive interface utilizing Tailwind CSS.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+
                     {/* Experience Item */}
                     <motion.div
                         className="relative pl-8 md:pl-0"
