@@ -3,6 +3,20 @@ import { Github, ExternalLink, Code2 } from "lucide-react";
 
 const projects = [
     {
+        title: "FishConnect AI",
+        description: "A mobile-first Next.js 14 application for coastal Indian fishermen featuring AI-powered demand forecasting, marine data, and a direct buyer marketplace.",
+        tags: ["Next.js 14", "AI", "TypeScript", "Recharts"],
+        github: "https://github.com/Samxxr007/Fish-Connect",
+        deploy: "https://fish-connect.vercel.app/"
+    },
+    {
+        title: "Luminary Studio",
+        description: "A premium, luxury-minimalist digital agency homepage demonstrating editorial design and high-performance React features.",
+        tags: ["Next.js 14", "Framer Motion", "UI/UX", "Vercel"],
+        github: "https://github.com/Samxxr007/Design-Agency-Home-Page",
+        deploy: "https://design-agency-home-page.vercel.app"
+    },
+    {
         title: "Prashikshan Learning Hub",
         description: "A modern training and learning management platform designed to streamline course delivery and user progress.",
         tags: ["React", "LMS", "Education", "Vite"],
@@ -28,12 +42,6 @@ const projects = [
         description: "A smart city waste management dashboard integrated with ESP32-based hardware for real-time monitoring.",
         tags: ["React", "IoT", "Firebase", "Dashboard"],
         github: "https://github.com/Samxxr007/Cityclean360"
-    },
-    {
-        title: "Modern Landing Page",
-        description: "A high-performance, responsive landing page demonstrating precision in HTML and CSS design principles.",
-        tags: ["HTML", "CSS", "UI/UX", "Clean Code"],
-        github: "https://github.com/Samxxr007/Landing-Page-HTML-and-CSS-"
     }
 ];
 
