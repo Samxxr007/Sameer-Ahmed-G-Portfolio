@@ -17,11 +17,11 @@ export default function About() {
 
                     <div className="glass-card p-8 md:p-12 rounded-2xl w-full border border-slate-800/60 bg-slate-900/50">
                         <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-6 font-medium">
-                            Second-year B.Tech Information Technology student at SIMATS University.
+                            Software Engineer at <span style={{ color: "var(--color-accent)" }}>The Skybrisk</span> and a second-year B.Tech Student at <span style={{ color: "var(--color-accent)" }}>SIMATS University</span>.
                         </p>
 
                         <p className="text-base md:text-lg text-slate-400 leading-relaxed font-light">
-                            Highly motivated intern with a passion for software engineering and web development. Seeking a hands-on role where I can contribute to real-world projects and grow professionally. I strive to create clean, responsive, and performance-driven applications while exploring new technologies.
+                            Highly motivated Software Engineer specializing in Full Stack development. I have a passion for creating clean, responsive, and performance-driven applications. Currently balancing my professional role at The Skybrisk with academic excellence at SIMATS, I strive to contribute to real-world projects and push the boundaries of modern web technologies.
                         </p>
                     </div>
                 </motion.div>
