@@ -19,6 +19,68 @@ export default function Experience() {
                 </motion.div>
 
                 <div className="space-y-12">
+                    {/* Skybrisk Experience Item */}
+                    <motion.div
+                        className="relative pl-8 md:pl-0"
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <div className="md:grid md:grid-cols-5 md:gap-8 items-start">
+                            <div className="hidden md:flex flex-col items-end col-span-1 pt-1">
+                                <div
+                                    className="flex items-center gap-2 text-sm font-medium"
+                                    style={{ color: "var(--color-accent)" }}
+                                >
+                                    <Calendar size={16} />
+                                    <span>2024 - Present</span>
+                                </div>
+                            </div>
+
+                            <div className="md:col-span-4 relative">
+                                {/* Timeline dot */}
+                                <div
+                                    className="absolute -left-10 md:-left-[2.5rem] top-1 h-5 w-5 rounded-full border-4 border-slate-950 flex items-center justify-center z-10"
+                                    style={{ backgroundColor: "var(--color-accent)" }}
+                                >
+                                    <div className="h-1.5 w-1.5 rounded-full bg-white"></div>
+                                </div>
+                                {/* Timeline line */}
+                                <div className="absolute -left-[2.1rem] top-5 bottom-[-3rem] md:bottom-[-4rem] w-[2px] bg-slate-800"></div>
+
+                                <div className="glass-card p-6 md:p-8 rounded-2xl border border-slate-800/60 bg-slate-900/50">
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <div
+                                            className="p-2 rounded-lg bg-slate-800/80"
+                                            style={{ color: "var(--color-accent)" }}
+                                        >
+                                            <Briefcase size={20} />
+                                        </div>
+                                        <h3 className="text-xl md:text-2xl font-bold text-white">Software Engineer</h3>
+                                    </div>
+                                    <h4
+                                        className="text-lg font-medium mb-4"
+                                        style={{ color: "var(--color-accent)" }}
+                                    >
+                                        The Skybrisk
+                                    </h4>
+                                    <div className="md:hidden flex items-center gap-2 text-slate-400 text-sm mb-4">
+                                        <Calendar size={14} />
+                                        <span>2024 - Present</span>
+                                    </div>
+                                    <ul
+                                        className="space-y-2 text-slate-300 text-sm md:text-base leading-relaxed list-disc list-inside"
+                                    >
+                                        <li className="marker:text-[color:var(--color-accent)]">Leading development of modern ERP systems and full-stack solutions.</li>
+                                        <li className="marker:text-[color:var(--color-accent)]">Implementing scalable architectures using React and Node.js.</li>
+                                        <li className="marker:text-[color:var(--color-accent)]">Collaborating on real-world business automation projects.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+
                     {/* Experience Item */}
                     <motion.div
                         className="relative pl-8 md:pl-0"
