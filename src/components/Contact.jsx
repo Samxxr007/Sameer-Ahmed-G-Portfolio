@@ -186,7 +186,7 @@ export default function Contact() {
                                                 value={formData.name}
                                                 onChange={handleChange}
                                                 placeholder="Sameer Ahmed"
-                                                className="w-full bg-slate-950/50 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[color:var(--color-accent)] transition-colors"
+                                                className="w-full bg-slate-950/60 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[color:var(--color-accent)] focus:ring-2 focus:ring-[color:var(--color-accent)]/20 transition-all text-sm"
                                             />
                                         </div>
                                         <div className="space-y-2">
@@ -198,7 +198,7 @@ export default function Contact() {
                                                 value={formData.email}
                                                 onChange={handleChange}
                                                 placeholder="example@gmail.com"
-                                                className="w-full bg-slate-950/50 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[color:var(--color-accent)] transition-colors"
+                                                className="w-full bg-slate-950/60 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[color:var(--color-accent)] focus:ring-2 focus:ring-[color:var(--color-accent)]/20 transition-all text-sm"
                                             />
                                         </div>
                                     </div>
@@ -210,8 +210,8 @@ export default function Contact() {
                                             name="subject"
                                             value={formData.subject}
                                             onChange={handleChange}
-                                            placeholder="Inquiry about project"
-                                            className="w-full bg-slate-950/50 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[color:var(--color-accent)] transition-colors"
+                                            placeholder="Inquiry about project or role"
+                                            className="w-full bg-slate-950/60 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[color:var(--color-accent)] focus:ring-2 focus:ring-[color:var(--color-accent)]/20 transition-all text-sm"
                                         />
                                     </div>
                                     <div className="space-y-2">
@@ -223,14 +223,14 @@ export default function Contact() {
                                             value={formData.message}
                                             onChange={handleChange}
                                             placeholder="Write your message here..."
-                                            className="w-full bg-slate-950/50 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[color:var(--color-accent)] transition-colors resize-none"
+                                            className="w-full bg-slate-950/60 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[color:var(--color-accent)] focus:ring-2 focus:ring-[color:var(--color-accent)]/20 transition-all resize-none text-sm"
                                         ></textarea>
                                     </div>
 
                                     <button
                                         disabled={status === "sending"}
                                         type="submit"
-                                        className="w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all hover:brightness-110 shadow-lg disabled:opacity-70 disabled:cursor-not-allowed group"
+                                        className="w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all hover:brightness-110 shadow-[0_0_20px_color-mix(in_srgb,var(--color-accent)_30%,transparent)] disabled:opacity-70 disabled:cursor-not-allowed group text-sm"
                                         style={{
                                             backgroundColor: "var(--color-accent)",
                                             color: "#020617"
