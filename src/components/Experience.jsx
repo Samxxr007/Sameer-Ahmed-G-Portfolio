@@ -318,27 +318,27 @@ export default function Experience() {
                                         <h3 className="text-xl md:text-2xl font-bold text-white">B.Tech in Information Technology</h3>
                                     </div>
                                     <h4
-                                        className="text-lg font-semibold mb-4"
+                                        className="text-lg font-medium mb-4"
                                         style={{ color: "var(--color-accent)" }}
                                     >
-                                        Saveetha School of Engineering (SIMATS), Chennai
+                                        SIMATS University, Chennai, Tamil Nadu
                                     </h4>
                                     <div className="md:hidden flex items-center gap-2 text-slate-400 text-sm mb-4">
                                         <Calendar size={14} />
                                         <span>2024 - Present</span>
                                     </div>
-                                    <p className="text-slate-300 leading-relaxed mb-3 font-light">
-                                        Second-Year Undergraduate specializing in Full Stack, Cloud, and AI Systems.
+                                    <p className="text-slate-300 leading-relaxed mb-2">
+                                        Currently in Second Year.
                                     </p>
                                     <p
-                                        className="inline-flex items-center rounded-xl px-3.5 py-1.5 text-xs font-bold ring-1 ring-inset"
+                                        className="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ring-1 ring-inset"
                                         style={{
-                                            backgroundColor: "color-mix(in srgb, var(--color-accent) 12%, transparent)",
+                                            backgroundColor: "color-mix(in srgb, var(--color-accent) 10%, transparent)",
                                             color: "var(--color-accent)",
-                                            ringColor: "color-mix(in srgb, var(--color-accent) 30%, transparent)"
+                                            ringColor: "color-mix(in srgb, var(--color-accent) 20%, transparent)"
                                         }}
                                     >
-                                        CGPA: 9.37 / 10.0 (Top 5% of Cohort)
+                                        CGPA: 9.35
                                     </p>
                                 </div>
                             </div>
