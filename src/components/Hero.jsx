@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { User, Download } from "lucide-react";
-import profileImg from "../assets/profile.jpg";
+import profileImg from "../assets/Sameer Ahmed G.jpg";
 
 export default function Hero() {
     return (
@@ -44,7 +44,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
-                        Aspiring Software Engineer / Web Developer
+                        Software Engineer · React Native & Full Stack Developer
                     </motion.h2>
 
                     <motion.p
@@ -53,7 +53,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
                     >
-                        I am passionate about building modern web applications and IoT systems. I enjoy solving real-world problems using technology.
+                        Engineering high-performance mobile apps, intelligent AI architectures, and scalable full-stack web applications with modern technologies.
                     </motion.p>
 
                     <motion.div

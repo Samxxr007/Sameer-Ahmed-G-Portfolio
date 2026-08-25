@@ -4,40 +4,47 @@ import { Settings, X, Droplet } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
 
 export default function ThemeCustomizer() {
-    const [isOpen, setIsOpen] = useState(false);
-    const { accentColor, THEMES, changeTheme } = useTheme();
+    const { accentColor, THEMES, changeTheme, isCustomizerOpen, openCustomizer, closeCustomizer } = useTheme();
 
     return (
         <>
-            {/* Floating Toggle Button */}
-            <motion.button
-                className="fixed right-6 bottom-24 md:bottom-20 z-40 p-3 rounded-full bg-slate-900 border border-slate-700 shadow-[0_0_15px_rgba(0,0,0,0.5)] text-slate-300 hover:text-white transition-all flex items-center justify-center group"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => setIsOpen(true)}
-            >
-                <span className="hidden md:block absolute right-full mr-4 bg-slate-800 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-slate-700 pointer-events-none">
-                    Theme Customizer
-                </span>
-                <Droplet size={20} style={{ color: "var(--color-accent)" }} />
-            </motion.button>
+            {/* Floating Toggle Button (Hidden when customizer panel is open) */}
+            <AnimatePresence>
+                {!isCustomizerOpen && (
+                    <motion.button
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        className="fixed right-5 bottom-6 md:right-8 md:bottom-8 z-30 p-3.5 rounded-full bg-slate-900/90 backdrop-blur-md border border-slate-700/80 shadow-[0_4px_25px_rgba(0,0,0,0.6)] text-slate-300 hover:text-white transition-all flex items-center justify-center group hover:border-[color:var(--color-accent)]"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={openCustomizer}
+                        aria-label="Open Theme Customizer"
+                    >
+                        <span className="hidden md:block absolute right-full mr-3 bg-slate-900/90 text-xs px-2.5 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-slate-700 pointer-events-none shadow-xl">
+                            Customize Theme
+                        </span>
+                        <Droplet size={20} style={{ color: "var(--color-accent)" }} />
+                    </motion.button>
+                )}
+            </AnimatePresence>
 
             {/* Slide-out Panel Backdrop */}
             <AnimatePresence>
-                {isOpen && (
+                {isCustomizerOpen && (
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 bg-black/50 z-50 backdrop-blur-sm"
-                        onClick={() => setIsOpen(false)}
+                        className="fixed inset-0 bg-black/60 z-50 backdrop-blur-sm"
+                        onClick={closeCustomizer}
                     />
                 )}
             </AnimatePresence>
 
             {/* Slide-out Panel */}
             <AnimatePresence>
-                {isOpen && (
+                {isCustomizerOpen && (
                     <motion.div
                         initial={{ x: "100%" }}
                         animate={{ x: 0 }}
@@ -55,8 +62,9 @@ export default function ThemeCustomizer() {
                                     <p className="text-sm text-slate-500 mt-1">Personalize your experience</p>
                                 </div>
                                 <button
-                                    onClick={() => setIsOpen(false)}
+                                    onClick={closeCustomizer}
                                     className="p-2 rounded-md hover:bg-slate-800 text-slate-400 hover:text-white transition-colors"
+                                    aria-label="Close Theme Customizer"
                                 >
                                     <X size={20} />
                                 </button>

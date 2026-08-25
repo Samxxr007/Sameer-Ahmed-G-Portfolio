@@ -17,11 +17,11 @@ export default function About() {
 
                     <div className="glass-card p-8 md:p-12 rounded-2xl w-full border border-slate-800/60 bg-slate-900/50">
                         <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-6 font-medium">
-                            Software Engineer at <span style={{ color: "var(--color-accent)" }}>The Skybrisk</span> and a second-year B.Tech Student at <span style={{ color: "var(--color-accent)" }}>SIMATS University</span>.
+                            React Native Developer at <span style={{ color: "var(--color-accent)" }}>Truck Hai</span> and second-year B.Tech Student at <span style={{ color: "var(--color-accent)" }}>SIMATS University</span>.
                         </p>
 
                         <p className="text-base md:text-lg text-slate-400 leading-relaxed font-light">
-                            Highly motivated Software Engineer specializing in Full Stack development. I have a passion for creating clean, responsive, and performance-driven applications. Currently balancing my professional role at The Skybrisk with academic excellence at SIMATS, I strive to contribute to real-world projects and push the boundaries of modern web technologies.
+                            Highly motivated Software Engineer specializing in Mobile (React Native / Expo) and Full Stack development. Passionate about building robust cross-platform mobile apps, intelligent AI-backed platforms, and scalable backend microservices in Go, Node.js, and Python. Actively engineering real-world software while maintaining academic excellence at SIMATS.
                         </p>
                     </div>
                 </motion.div>

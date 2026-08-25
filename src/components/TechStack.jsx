@@ -3,34 +3,34 @@ import { Code2, Layout, Database, Terminal, Cpu, Globe } from "lucide-react";
 
 const skillGroups = [
     {
-        title: "Frontend Development",
-        icon: <Globe size={24} />,
-        skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js 14"]
-    },
-    {
-        title: "Mobile & UI/UX",
+        title: "Mobile & Frontend",
         icon: <Layout size={24} />,
-        skills: ["React Native", "Tailwind CSS", "Material-UI", "Framer Motion"]
+        skills: ["React Native", "Expo", "React 19", "Next.js 14", "TypeScript", "Tailwind CSS"]
     },
     {
-        title: "Backend & Database",
+        title: "Backend & Cloud",
         icon: <Database size={24} />,
-        skills: ["Node.js", "Express.js", "MongoDB", "Firebase"]
+        skills: ["Go (Golang)", "Node.js", "FastAPI", "PostgreSQL", "MongoDB", "Prisma"]
+    },
+    {
+        title: "AI & Computer Vision",
+        icon: <Cpu size={24} />,
+        skills: ["YOLOv11", "OpenCV", "Scikit-Learn", "REST APIs", "BFF Patterns"]
+    },
+    {
+        title: "DevOps & Tooling",
+        icon: <Terminal size={24} />,
+        skills: ["Docker", "CI/CD", "GitHub Actions", "Git", "Vercel", "Render"]
     },
     {
         title: "Core Languages",
         icon: <Code2 size={24} />,
-        skills: ["Java", "Python", "C", "C++"]
+        skills: ["TypeScript", "JavaScript", "Go", "Python", "Java", "C/C++"]
     },
     {
-        title: "Tools & Deployment",
-        icon: <Terminal size={24} />,
-        skills: ["Git", "GitHub", "Vite", "Vercel", "Render", "Postman"]
-    },
-    {
-        title: "AI & Architecture",
-        icon: <Cpu size={24} />,
-        skills: ["ChatGPT", "GitHub Copilot", "REST APIs", "BFF Patterns"]
+        title: "UI/UX & Interactive",
+        icon: <Globe size={24} />,
+        skills: ["Framer Motion", "Material-UI", "Recharts", "Leaflet GIS", "Responsive UI"]
     }
 ];
 

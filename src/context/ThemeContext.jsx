@@ -16,6 +16,7 @@ const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
     const [accentColor, setAccentColor] = useState(THEMES[0]);
+    const [isCustomizerOpen, setIsCustomizerOpen] = useState(false);
 
     useEffect(() => {
         // Load from local storage on mount
@@ -41,8 +42,20 @@ export function ThemeProvider({ children }) {
         if (theme) setAccentColor(theme);
     };
 
+    const openCustomizer = () => setIsCustomizerOpen(true);
+    const closeCustomizer = () => setIsCustomizerOpen(false);
+
     return (
-        <ThemeContext.Provider value={{ accentColor, THEMES, changeTheme, setCustomAccent: setAccentColor }}>
+        <ThemeContext.Provider value={{
+            accentColor,
+            THEMES,
+            changeTheme,
+            setCustomAccent: setAccentColor,
+            isCustomizerOpen,
+            setIsCustomizerOpen,
+            openCustomizer,
+            closeCustomizer
+        }}>
             {children}
         </ThemeContext.Provider>
     );

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Briefcase, GraduationCap, Calendar } from "lucide-react";
+import { Briefcase, GraduationCap, Calendar, MapPin } from "lucide-react";
 
 export default function Experience() {
     return (
@@ -15,17 +15,89 @@ export default function Experience() {
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                         Experience & <span style={{ color: "var(--color-accent)" }}>Education</span>
                     </h2>
-                    <p className="text-slate-400">My academic journey and professional experience.</p>
+                    <p className="text-slate-400">My academic journey and professional engineering experience.</p>
                 </motion.div>
 
                 <div className="space-y-12">
-                    {/* Skybrisk Experience Item */}
+                    {/* Truck Hai Experience Item */}
                     <motion.div
                         className="relative pl-8 md:pl-0"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-50px" }}
                         transition={{ duration: 0.5 }}
+                    >
+                        <div className="md:grid md:grid-cols-5 md:gap-8 items-start">
+                            <div className="hidden md:flex flex-col items-end col-span-1 pt-1">
+                                <div
+                                    className="flex items-center gap-2 text-sm font-medium"
+                                    style={{ color: "var(--color-accent)" }}
+                                >
+                                    <Calendar size={16} />
+                                    <span>Jul 2026 - Present</span>
+                                </div>
+                                <span className="text-xs text-slate-500 mt-1">2 mos · Current</span>
+                            </div>
+
+                            <div className="md:col-span-4 relative">
+                                {/* Timeline dot */}
+                                <div
+                                    className="absolute -left-10 md:-left-[2.5rem] top-1 h-5 w-5 rounded-full border-4 border-slate-950 flex items-center justify-center z-10"
+                                    style={{ backgroundColor: "var(--color-accent)" }}
+                                >
+                                    <div className="h-1.5 w-1.5 rounded-full bg-white"></div>
+                                </div>
+                                {/* Timeline line */}
+                                <div className="absolute -left-[2.1rem] top-5 bottom-[-3rem] md:bottom-[-4rem] w-[2px] bg-slate-800"></div>
+
+                                <div className="glass-card p-6 md:p-8 rounded-2xl border border-slate-800/60 bg-slate-900/50 hover:border-[color:var(--color-accent)]/30 transition-colors">
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <div
+                                            className="p-2 rounded-lg bg-slate-800/80"
+                                            style={{ color: "var(--color-accent)" }}
+                                        >
+                                            <Briefcase size={20} />
+                                        </div>
+                                        <h3 className="text-xl md:text-2xl font-bold text-white">React Native Developer</h3>
+                                    </div>
+                                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-4">
+                                        <h4
+                                            className="text-lg font-medium"
+                                            style={{ color: "var(--color-accent)" }}
+                                        >
+                                            Truck Hai · Internship
+                                        </h4>
+                                        <span className="text-slate-500 text-xs">•</span>
+                                        <span className="text-slate-400 text-sm flex items-center gap-1">
+                                            <MapPin size={13} /> India · Remote
+                                        </span>
+                                    </div>
+                                    <div className="md:hidden flex items-center gap-2 text-slate-400 text-sm mb-4">
+                                        <Calendar size={14} />
+                                        <span>Jul 2026 - Present (2 mos)</span>
+                                    </div>
+                                    <ul
+                                        className="space-y-2 text-slate-300 text-sm md:text-base leading-relaxed list-disc list-inside"
+                                    >
+                                        <li className="marker:text-[color:var(--color-accent)]">Developed and enhanced features for the Truck Hai mobile application using React Native, Expo, TypeScript, and Go.</li>
+                                        <li className="marker:text-[color:var(--color-accent)]">Built, maintained, and optimized scalable frontend components while contributing to backend services developed in Go.</li>
+                                        <li className="marker:text-[color:var(--color-accent)]">Integrated REST APIs and collaborated across frontend and backend systems to ensure seamless data flow.</li>
+                                        <li className="marker:text-[color:var(--color-accent)]">Identified, debugged, and resolved UI, backend, functionality, and performance issues across application modules.</li>
+                                        <li className="marker:text-[color:var(--color-accent)]">Worked with PostgreSQL databases for local development, testing, and backend integration.</li>
+                                        <li className="marker:text-[color:var(--color-accent)]">Managed Git workflows, pull requests, code reviews, and followed Agile development practices with cross-functional teams.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Skybrisk Experience Item */}
+                    <motion.div
+                        className="relative pl-8 md:pl-0"
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                        transition={{ duration: 0.5, delay: 0.05 }}
                     >
                         <div className="md:grid md:grid-cols-5 md:gap-8 items-start">
                             <div className="hidden md:flex flex-col items-end col-span-1 pt-1">
@@ -49,7 +121,7 @@ export default function Experience() {
                                 {/* Timeline line */}
                                 <div className="absolute -left-[2.1rem] top-5 bottom-[-3rem] md:bottom-[-4rem] w-[2px] bg-slate-800"></div>
 
-                                <div className="glass-card p-6 md:p-8 rounded-2xl border border-slate-800/60 bg-slate-900/50">
+                                <div className="glass-card p-6 md:p-8 rounded-2xl border border-slate-800/60 bg-slate-900/50 hover:border-[color:var(--color-accent)]/30 transition-colors">
                                     <div className="flex items-center gap-3 mb-2">
                                         <div
                                             className="p-2 rounded-lg bg-slate-800/80"
