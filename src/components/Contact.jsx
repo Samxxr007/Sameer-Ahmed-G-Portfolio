@@ -271,17 +271,19 @@ function ContactInfoCard({ icon, label, value, link }) {
                 visible: { opacity: 1, x: 0 }
             }}
             whileHover={{ x: 5 }}
-            className="glass-card p-6 rounded-2xl border border-slate-800/60 bg-slate-900/40 flex items-center gap-6 group transition-all"
+            className="glass-card p-4 sm:p-6 rounded-2xl border border-slate-800/60 bg-slate-900/40 flex items-center gap-4 sm:gap-6 group transition-all min-w-0 overflow-hidden"
         >
             <div
-                className="p-4 rounded-xl bg-slate-950 shadow-inner group-hover:scale-110 transition-transform duration-300"
+                className="p-3.5 sm:p-4 rounded-xl bg-slate-950 shadow-inner group-hover:scale-110 transition-transform duration-300 shrink-0"
                 style={{ color: "var(--color-accent)" }}
             >
                 {icon}
             </div>
-            <div>
+            <div className="min-w-0 flex-1 overflow-hidden">
                 <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1">{label}</p>
-                <p className="text-lg font-bold text-white group-hover:text-[color:var(--color-accent)] transition-colors">{value}</p>
+                <p className="text-sm sm:text-base md:text-lg font-bold text-white group-hover:text-[color:var(--color-accent)] transition-colors truncate break-all">
+                    {value}
+                </p>
             </div>
         </motion.a>
     );
@@ -298,16 +300,16 @@ function SocialCard({ icon, label, value, link }) {
                 visible: { opacity: 1, y: 0 }
             }}
             whileHover={{ y: -5 }}
-            className="glass-card p-5 rounded-2xl border border-slate-800/60 bg-slate-900/40 flex flex-col items-center text-center group transition-all"
+            className="glass-card p-4 sm:p-5 rounded-2xl border border-slate-800/60 bg-slate-900/40 flex flex-col items-center text-center group transition-all min-w-0 overflow-hidden"
         >
             <div
-                className="mb-3 p-3 rounded-xl bg-slate-950 shadow-inner group-hover:scale-110 transition-transform duration-300"
+                className="mb-3 p-3 rounded-xl bg-slate-950 shadow-inner group-hover:scale-110 transition-transform duration-300 shrink-0"
                 style={{ color: "var(--color-accent)" }}
             >
                 {icon}
             </div>
             <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">{label}</p>
-            <p className="text-sm font-bold text-white group-hover:text-[color:var(--color-accent)] transition-colors">{value}</p>
+            <p className="text-xs sm:text-sm font-bold text-white group-hover:text-[color:var(--color-accent)] transition-colors truncate w-full">{value}</p>
         </motion.a>
     );
 }
