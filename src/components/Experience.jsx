@@ -48,7 +48,13 @@ export default function Experience() {
                                     <div className="h-1.5 w-1.5 rounded-full bg-white"></div>
                                 </div>
                                 {/* Timeline line */}
-                                <div className="absolute -left-[2.1rem] top-5 bottom-[-3rem] md:bottom-[-4rem] w-[2px] bg-slate-800"></div>
+                                <div className="absolute -left-[2.1rem] top-5 bottom-[-3rem] md:bottom-[-4rem] w-[2px] bg-slate-800 overflow-hidden">
+                                    <motion.div
+                                        animate={{ y: ["-100%", "200%"] }}
+                                        transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+                                        className="w-full h-1/2 bg-gradient-to-b from-transparent via-[color:var(--color-accent)] to-transparent"
+                                    />
+                                </div>
 
                                 <div className="glass-card p-6 md:p-8 rounded-3xl border border-slate-800/70 bg-slate-900/50 hover:border-[color:var(--color-accent)]/40 hover:shadow-2xl transition-all">
                                     <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
@@ -122,7 +128,13 @@ export default function Experience() {
                                     <div className="h-1.5 w-1.5 rounded-full bg-white"></div>
                                 </div>
                                 {/* Timeline line */}
-                                <div className="absolute -left-[2.1rem] top-5 bottom-[-3rem] md:bottom-[-4rem] w-[2px] bg-slate-800"></div>
+                                <div className="absolute -left-[2.1rem] top-5 bottom-[-3rem] md:bottom-[-4rem] w-[2px] bg-slate-800 overflow-hidden">
+                                    <motion.div
+                                        animate={{ y: ["-100%", "200%"] }}
+                                        transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+                                        className="w-full h-1/2 bg-gradient-to-b from-transparent via-[color:var(--color-accent)] to-transparent"
+                                    />
+                                </div>
 
                                 <div className="glass-card p-6 md:p-8 rounded-3xl border border-slate-800/70 bg-slate-900/50 hover:border-[color:var(--color-accent)]/30 hover:shadow-2xl transition-all">
                                     <div className="flex items-center gap-3 mb-2">
@@ -184,69 +196,81 @@ export default function Experience() {
                                     <div className="h-1.5 w-1.5 rounded-full bg-white"></div>
                                 </div>
                                 {/* Timeline line */}
-                                <div className="absolute -left-[2.1rem] top-5 bottom-[-3rem] md:bottom-[-4rem] w-[2px] bg-slate-800"></div>
+                                <div className="absolute -left-[2.1rem] top-5 bottom-[-3rem] md:bottom-[-4rem] w-[2px] bg-slate-800 overflow-hidden">
+                                    <motion.div
+                                        animate={{ y: ["-100%", "200%"] }}
+                                        transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1.6 }}
+                                        className="w-full h-1/2 bg-gradient-to-b from-transparent via-[color:var(--color-accent)] to-transparent"
+                                    />
+                                </div>
 
                                 <div className="glass-card p-6 md:p-8 rounded-3xl border border-slate-800/70 bg-slate-900/50 hover:border-[color:var(--color-accent)]/30 hover:shadow-2xl transition-all">
                                     <div className="flex items-center gap-3 mb-2">
-                                        <div
-                                            className="p-2.5 rounded-xl bg-slate-800/80 border border-slate-700/60"
-                                            style={{ color: "var(--color-accent)" }}
-                                        >
-                                            <Briefcase size={20} />
-                                        </div>
-                                        <h3 className="text-xl md:text-2xl font-bold text-white">Full Stack Intern</h3>
-                                    </div>
-                                    <h4
-                                        className="text-lg font-medium mb-4"
-                                        style={{ color: "var(--color-accent)" }}
-                                    >
-                                        RMkart · ShopSphere Platform
-                                    </h4>
-                                    <div className="md:hidden flex items-center gap-2 text-slate-400 text-sm mb-4">
-                                        <Calendar size={14} />
-                                        <span>Feb 2026 - Mar 2026</span>
-                                    </div>
-                                    <ul
-                                        className="space-y-2.5 text-slate-300 text-sm md:text-base leading-relaxed list-disc list-inside font-light"
-                                    >
-                                        <li className="marker:text-[color:var(--color-accent)]"><strong className="text-white font-medium">BFF Pattern Transition:</strong> Transitioned monolithic e-commerce endpoints to a decoupled Backend-for-Frontend (BFF) architecture, improving mobile responsiveness.</li>
-                                        <li className="marker:text-[color:var(--color-accent)]"><strong className="text-white font-medium">Authentication & Security:</strong> Implemented JWT token rotation and secure session management across buyer and seller portals.</li>
-                                        <li className="marker:text-[color:var(--color-accent)]"><strong className="text-white font-medium">Scalable React/Vite UI:</strong> Designed interactive product catalogs and lightning-fast checkout experiences.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </motion.div>
+                                         <div
+                                             className="p-2.5 rounded-xl bg-slate-800/80 border border-slate-700/60"
+                                             style={{ color: "var(--color-accent)" }}
+                                         >
+                                             <Briefcase size={20} />
+                                         </div>
+                                         <h3 className="text-xl md:text-2xl font-bold text-white">Full Stack Intern</h3>
+                                     </div>
+                                     <h4
+                                         className="text-lg font-medium mb-4"
+                                         style={{ color: "var(--color-accent)" }}
+                                     >
+                                         RMkart · ShopSphere Platform
+                                     </h4>
+                                     <div className="md:hidden flex items-center gap-2 text-slate-400 text-sm mb-4">
+                                         <Calendar size={14} />
+                                         <span>Feb 2026 - Mar 2026</span>
+                                     </div>
+                                     <ul
+                                         className="space-y-2.5 text-slate-300 text-sm md:text-base leading-relaxed list-disc list-inside font-light"
+                                     >
+                                         <li className="marker:text-[color:var(--color-accent)]"><strong className="text-white font-medium">BFF Pattern Transition:</strong> Transitioned monolithic e-commerce endpoints to a decoupled Backend-for-Frontend (BFF) architecture, improving mobile responsiveness.</li>
+                                         <li className="marker:text-[color:var(--color-accent)]"><strong className="text-white font-medium">Authentication & Security:</strong> Implemented JWT token rotation and secure session management across buyer and seller portals.</li>
+                                         <li className="marker:text-[color:var(--color-accent)]"><strong className="text-white font-medium">Scalable React/Vite UI:</strong> Designed interactive product catalogs and lightning-fast checkout experiences.</li>
+                                     </ul>
+                                 </div>
+                             </div>
+                         </div>
+                     </motion.div>
 
-                    {/* Corizo Experience Item */}
-                    <motion.div
-                        className="relative pl-8 md:pl-0"
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, margin: "-50px" }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <div className="md:grid md:grid-cols-5 md:gap-8 items-start">
-                            <div className="hidden md:flex flex-col items-end col-span-1 pt-1">
-                                <div
-                                    className="flex items-center gap-2 text-sm font-medium"
-                                    style={{ color: "var(--color-accent)" }}
-                                >
-                                    <Calendar size={16} />
-                                    <span>Jun 2025 - Aug 2025</span>
-                                </div>
-                            </div>
+                     {/* Corizo Experience Item */}
+                     <motion.div
+                         className="relative pl-8 md:pl-0"
+                         initial={{ opacity: 0, x: -20 }}
+                         whileInView={{ opacity: 1, x: 0 }}
+                         viewport={{ once: true, margin: "-50px" }}
+                         transition={{ duration: 0.5 }}
+                     >
+                         <div className="md:grid md:grid-cols-5 md:gap-8 items-start">
+                             <div className="hidden md:flex flex-col items-end col-span-1 pt-1">
+                                 <div
+                                     className="flex items-center gap-2 text-sm font-medium"
+                                     style={{ color: "var(--color-accent)" }}
+                                 >
+                                     <Calendar size={16} />
+                                     <span>Jun 2025 - Aug 2025</span>
+                                 </div>
+                             </div>
 
-                            <div className="md:col-span-4 relative">
-                                {/* Timeline dot */}
-                                <div
-                                    className="absolute -left-10 md:-left-[2.5rem] top-1 h-5 w-5 rounded-full border-4 border-slate-950 flex items-center justify-center z-10"
-                                    style={{ backgroundColor: "var(--color-accent)" }}
-                                >
-                                    <div className="h-1.5 w-1.5 rounded-full bg-white"></div>
-                                </div>
-                                {/* Timeline line */}
-                                <div className="absolute -left-[2.1rem] top-5 bottom-[-3rem] md:bottom-[-4rem] w-[2px] bg-slate-800"></div>
+                             <div className="md:col-span-4 relative">
+                                 {/* Timeline dot */}
+                                 <div
+                                     className="absolute -left-10 md:-left-[2.5rem] top-1 h-5 w-5 rounded-full border-4 border-slate-950 flex items-center justify-center z-10"
+                                     style={{ backgroundColor: "var(--color-accent)" }}
+                                 >
+                                     <div className="h-1.5 w-1.5 rounded-full bg-white"></div>
+                                 </div>
+                                 {/* Timeline line */}
+                                 <div className="absolute -left-[2.1rem] top-5 bottom-[-3rem] md:bottom-[-4rem] w-[2px] bg-slate-800 overflow-hidden">
+                                     <motion.div
+                                         animate={{ y: ["-100%", "200%"] }}
+                                         transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 2.4 }}
+                                         className="w-full h-1/2 bg-gradient-to-b from-transparent via-[color:var(--color-accent)] to-transparent"
+                                     />
+                                 </div>
 
                                 <div className="glass-card p-6 md:p-8 rounded-3xl border border-slate-800/70 bg-slate-900/50 hover:border-[color:var(--color-accent)]/30 hover:shadow-2xl transition-all">
                                     <div className="flex items-center gap-3 mb-2">

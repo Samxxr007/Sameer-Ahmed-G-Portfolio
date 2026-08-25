@@ -110,16 +110,22 @@ export default function TechStack() {
                             </h3>
 
                             <div className="flex flex-wrap gap-2">
-                                {group.skills.map((skill) => (
+                                {group.skills.map((skill, i) => (
                                     <motion.span
                                         key={skill}
-                                        whileHover={{ scale: 1.08, y: -2 }}
-                                        transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                                        className="px-3.5 py-1.5 rounded-xl text-xs font-semibold border transition-all cursor-default shadow-sm"
+                                        whileHover={{
+                                            scale: 1.12,
+                                            y: -4,
+                                            rotate: (i % 2 === 0 ? 2 : -2),
+                                            boxShadow: "0 0 20px color-mix(in srgb, var(--color-accent) 30%, transparent)"
+                                        }}
+                                        whileTap={{ scale: 0.95 }}
+                                        transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                                        className="px-3.5 py-1.5 rounded-xl text-xs font-semibold border transition-all cursor-pointer select-none shadow-sm"
                                         style={{
-                                            borderColor: "color-mix(in srgb, var(--color-accent) 25%, transparent)",
+                                            borderColor: "color-mix(in srgb, var(--color-accent) 30%, transparent)",
                                             color: "color-mix(in srgb, var(--color-accent) 90%, white)",
-                                            backgroundColor: "color-mix(in srgb, var(--color-accent) 6%, transparent)"
+                                            backgroundColor: "color-mix(in srgb, var(--color-accent) 8%, transparent)"
                                         }}
                                     >
                                         {skill}
