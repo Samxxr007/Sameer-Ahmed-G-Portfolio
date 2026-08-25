@@ -57,8 +57,9 @@ export default function Preloader({ onComplete }) {
             const id = Math.random();
             const text = CODE_SNIPPETS[Math.floor(Math.random() * CODE_SNIPPETS.length)];
             const startX = (Math.random() - 0.5) * 120; // range around laptop
+            const driftX = (Math.random() - 0.5) * 40;
 
-            setFloatingCodes((prev) => [...prev.slice(-5), { id, text, startX }]);
+            setFloatingCodes((prev) => [...prev.slice(-5), { id, text, startX, driftX }]);
         }, 380);
 
         const handleKeyDown = (e) => {
@@ -116,7 +117,7 @@ export default function Preloader({ onComplete }) {
                                 animate={{
                                     opacity: [0, 0.9, 0],
                                     y: -80,
-                                    x: item.startX + (Math.random() - 0.5) * 40,
+                                    x: item.startX + item.driftX,
                                     scale: [0.6, 1, 0.8]
                                 }}
                                 exit={{ opacity: 0 }}
