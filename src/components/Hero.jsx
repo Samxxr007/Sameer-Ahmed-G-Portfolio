@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { User, Download, Eye, Sparkles, Code2, Cpu, Smartphone, Award } from "lucide-react";
+import { User, Download, Eye, Sparkles, Code2, Cpu, Smartphone, Award, Terminal } from "lucide-react";
 import profileImg from "../assets/Sameer Ahmed G.jpg";
 import ResumeModal from "./ResumeModal";
 
