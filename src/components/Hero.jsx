@@ -14,8 +14,8 @@ const dynamicRoles = [
 const highlights = [
     { label: "Flagship Projects", value: "12+", icon: Code2 },
     { label: "Trained ML Models", value: "7+", icon: Cpu },
-    { label: "Industry Internships", value: "4", icon: Smartphone },
-    { label: "Academic CGPA", value: "9.35", icon: Award }
+    { label: "Industry Internships", value: "3+", icon: Smartphone },
+    { label: "Academic CGPA", value: "9.37", icon: Award }
 ];
 
 export default function Hero() {

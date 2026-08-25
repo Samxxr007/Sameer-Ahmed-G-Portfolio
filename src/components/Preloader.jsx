@@ -35,10 +35,10 @@ export default function Preloader({ onComplete }) {
                     clearInterval(interval);
                     setTimeout(() => {
                         onComplete();
-                    }, 400);
+                    }, 650);
                     return 100;
                 }
-                const increment = Math.floor(Math.random() * 6) + 3;
+                const increment = Math.floor(Math.random() * 3) + 2; // increments by 2-4 per step
                 const nextVal = Math.min(prev + increment, 100);
 
                 // Update status message based on progress bracket
@@ -50,7 +50,7 @@ export default function Preloader({ onComplete }) {
 
                 return nextVal;
             });
-        }, 60);
+        }, 85);
 
         // Spawn floating code snippets
         const codeSpawner = setInterval(() => {
@@ -59,7 +59,7 @@ export default function Preloader({ onComplete }) {
             const startX = (Math.random() - 0.5) * 120; // range around laptop
 
             setFloatingCodes((prev) => [...prev.slice(-5), { id, text, startX }]);
-        }, 300);
+        }, 380);
 
         const handleKeyDown = (e) => {
             if (e.key === "Escape") {
