@@ -17,7 +17,7 @@ export default function About() {
 
                     <div className="glass-card p-8 md:p-12 rounded-2xl w-full border border-slate-800/60 bg-slate-900/50">
                         <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-6 font-medium">
-                            React Native Developer at <span style={{ color: "var(--color-accent)" }}>Truck Hai</span> and second-year B.Tech Student at <span style={{ color: "var(--color-accent)" }}>SIMATS University</span>.
+                            React Native Developer at <span style={{ color: "var(--color-accent)" }}>Truck Hai</span> and 3rd-year B.Tech Student at <span style={{ color: "var(--color-accent)" }}>SIMATS University</span>.
                         </p>
 
                         <p className="text-base md:text-lg text-slate-400 leading-relaxed font-light">

@@ -1,6 +1,7 @@
-import { useState, useRef } from "react";
-import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { Github, ExternalLink, Code2, Sparkles, Activity, ShieldCheck, Cpu, Terminal, Layers, X, CheckCircle2, ChevronRight, Zap } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Github, ExternalLink, Code2, Sparkles, Activity, ShieldCheck, Cpu, Terminal, Layers, X, CheckCircle2, ChevronRight, Zap, ChevronDown, ChevronUp } from "lucide-react";
+import ClickSpark from "./ClickSpark";
 
 const categories = ["All", "AI & Machine Learning", "Full Stack & Web", "Systems & DevOps"];
 
@@ -13,7 +14,7 @@ const projects = [
         metric: "7 ML Models • 100% PHI Precision",
         featured: true,
         icon: Cpu,
-        gradient: "from-emerald-900/60 via-slate-900 to-slate-950",
+        gradient: "from-emerald-900/70 via-slate-900 to-slate-950",
         badgeColor: "text-emerald-400 border-emerald-500/30 bg-emerald-500/10",
         description: "SIH 2026 unified farm-level chemical intelligence and cross-domain traceability platform connecting crop pesticides, livestock antimicrobials, and regulatory compliance with 7 trained Scikit-Learn/XGBoost models.",
         architecture: "React & TypeScript Frontend → FastAPI Gateway → Scikit-Learn/XGBoost Inference Engine → Prisma ORM & PostgreSQL DB",
@@ -23,8 +24,8 @@ const projects = [
             "Automated regulatory threshold violation alerts"
         ],
         tags: ["React", "TypeScript", "FastAPI", "Python ML", "Prisma", "PostgreSQL"],
-        github: "https://github.com/Samxxr007/IndiaX-Unified-Farm-Intelligence",
-        deploy: "https://indiax-unified-farm.vercel.app"
+        github: "https://github.com/Samxxr007/IndiaX-Unified-Farm-Chemical-Intelligence-Traceability-Platform",
+        deploy: "https://frontend-ten-mauve-81.vercel.app/"
     },
     {
         id: "roadguard",
@@ -34,7 +35,7 @@ const projects = [
         metric: "YOLOv11 • <45ms CCTV GIS Tracking",
         featured: true,
         icon: Activity,
-        gradient: "from-cyan-900/60 via-slate-900 to-slate-950",
+        gradient: "from-cyan-900/70 via-slate-900 to-slate-950",
         badgeColor: "text-cyan-400 border-cyan-500/30 bg-cyan-500/10",
         description: "Intelligent Smart City road surface damage detection and predictive maintenance planning system utilizing municipal CCTV video streams, YOLOv11 Computer Vision, and interactive Leaflet GIS mapping.",
         architecture: "Municipal CCTV Feed → OpenCV Frame Extraction → YOLOv11 Damage Detector (<45ms) → FastAPI GIS Spatial Service → Leaflet UI",
@@ -54,7 +55,7 @@ const projects = [
         metric: "AI Demand Forecast • Direct Marketplace",
         featured: true,
         icon: Sparkles,
-        gradient: "from-blue-900/60 via-slate-900 to-slate-950",
+        gradient: "from-blue-900/70 via-slate-900 to-slate-950",
         badgeColor: "text-blue-400 border-blue-500/30 bg-blue-500/10",
         description: "Mobile-first Next.js 14 application for coastal Indian fishermen in Tamil Nadu & Kerala featuring AI-powered marine demand forecasting, real-time ocean data, and direct bulk buyer matchmaking.",
         architecture: "Next.js 14 App Router → AI Time-Series Forecaster → Real-Time Oceanography API → Direct Bulk Buyer Match Engine",
@@ -75,7 +76,7 @@ const projects = [
         metric: "100% Automated Build & Deploy",
         featured: true,
         icon: Terminal,
-        gradient: "from-purple-900/60 via-slate-900 to-slate-950",
+        gradient: "from-purple-900/70 via-slate-900 to-slate-950",
         badgeColor: "text-purple-400 border-purple-500/30 bg-purple-500/10",
         description: "Production-grade CI/CD ecosystem designed for automated containerization, unit testing, and continuous deployment of Next.js microservices using Docker and GitHub Actions workflows.",
         architecture: "Git Push → GitHub Actions Matrix Test → Docker Multi-Stage Image Build → Container Registry → Automated Production Deploy",
@@ -94,7 +95,7 @@ const projects = [
         status: "HackHustle AI",
         metric: "Visual DNA • Zero Return Fraud",
         icon: ShieldCheck,
-        gradient: "from-rose-900/60 via-slate-900 to-slate-950",
+        gradient: "from-rose-900/70 via-slate-900 to-slate-950",
         badgeColor: "text-rose-400 border-rose-500/30 bg-rose-500/10",
         description: "Edge AI and Cloud Forensic DNA verification pipeline engineered to eliminate return fraud through automated image tampering checks and serialized visual authentication.",
         architecture: "Product Packing Camera → Edge Feature Hash Extractor → Cloud Visual DNA Matcher → Serialized Return Verification",
@@ -113,7 +114,7 @@ const projects = [
         status: "Surveillance AI",
         metric: "OpenCV • Real-Time Stampede Prediction",
         icon: Activity,
-        gradient: "from-amber-900/60 via-slate-900 to-slate-950",
+        gradient: "from-amber-900/70 via-slate-900 to-slate-950",
         badgeColor: "text-amber-400 border-amber-500/30 bg-amber-500/10",
         description: "AI surveillance platform for high-density public venues providing real-time crowd density analysis, motion intelligence, and stampede risk prediction using OpenCV and FastAPI.",
         architecture: "RTSP Video Stream → Optical Flow & Density Estimator → Risk Threshold Matrix → FastAPI Alert Dispatcher",
@@ -132,7 +133,7 @@ const projects = [
         status: "Luxury Showcase",
         metric: "60 FPS Framer Motion • Editorial UI",
         icon: Sparkles,
-        gradient: "from-amber-800/40 via-slate-900 to-slate-950",
+        gradient: "from-amber-800/60 via-slate-900 to-slate-950",
         badgeColor: "text-amber-300 border-amber-500/30 bg-amber-500/10",
         description: "Premium luxury-minimalist digital agency homepage demonstrating editorial UI design, smooth micro-interactions, responsive ergonomics, and high-performance React features.",
         architecture: "Next.js 14 → Tailwind CSS Layout Engine → Framer Motion Spring Animations → Vercel Edge CDN",
@@ -152,7 +153,7 @@ const projects = [
         status: "DAA Capstone",
         metric: "Convex Hull & Closest Pair O(n log n)",
         icon: Layers,
-        gradient: "from-indigo-900/60 via-slate-900 to-slate-950",
+        gradient: "from-indigo-900/70 via-slate-900 to-slate-950",
         badgeColor: "text-indigo-400 border-indigo-500/30 bg-indigo-500/10",
         description: "Algorithmic capstone web application applying Convex Hull and Closest-Pair algorithms for collision-free drone swarm geometric formation and dynamic delivery route planning.",
         architecture: "Geometric Coordinate Plane → Graham Scan Convex Hull Engine → Divide & Conquer Closest Pair → Interactive Canvas UI",
@@ -171,7 +172,7 @@ const projects = [
         status: "MERN Stack",
         metric: "Multi-Role RBAC • Inventory Workflow",
         icon: Code2,
-        gradient: "from-orange-900/60 via-slate-900 to-slate-950",
+        gradient: "from-orange-900/70 via-slate-900 to-slate-950",
         badgeColor: "text-orange-400 border-orange-500/30 bg-orange-500/10",
         description: "Comprehensive enterprise business ERP management system built with role-based access control, secure authentication, and inventory order workflow tracking.",
         architecture: "React Frontend → Express REST API → MongoDB Cluster → JWT Auth & RBAC Middleware",
@@ -191,7 +192,7 @@ const projects = [
         status: "LMS Platform",
         metric: "Modular Learning • Real-Time Progress",
         icon: Layers,
-        gradient: "from-emerald-900/60 via-slate-900 to-slate-950",
+        gradient: "from-emerald-900/70 via-slate-900 to-slate-950",
         badgeColor: "text-emerald-400 border-emerald-500/30 bg-emerald-500/10",
         description: "Modern training and learning management platform engineered to streamline course delivery, interactive curriculum paths, and student progress tracking.",
         architecture: "Vite + React UI → Modular Chapter State Machine → Local & Cloud Progress Storage",
@@ -211,7 +212,7 @@ const projects = [
         status: "E-Commerce BFF",
         metric: "BFF Architecture • Custom JWT RBAC",
         icon: Code2,
-        gradient: "from-blue-900/60 via-slate-900 to-slate-950",
+        gradient: "from-blue-900/70 via-slate-900 to-slate-950",
         badgeColor: "text-blue-400 border-blue-500/30 bg-blue-500/10",
         description: "Interactive e-commerce marketplace platform built with Backend-for-Frontend (BFF) architecture, custom JWT validation, and multi-tier user authorization.",
         architecture: "React SPA → Dedicated BFF Layer → Product Catalog Microservice → Cart & Checkout Orchestration",
@@ -231,7 +232,7 @@ const projects = [
         status: "IoT Hardware",
         metric: "ESP32 Sensors • Real-Time Dispatch",
         icon: Terminal,
-        gradient: "from-teal-900/60 via-slate-900 to-slate-950",
+        gradient: "from-teal-900/70 via-slate-900 to-slate-950",
         badgeColor: "text-teal-400 border-teal-500/30 bg-teal-500/10",
         description: "Smart city IoT waste management dashboard integrated with ESP32 microcontrollers for real-time bin level telemetry, fire sensor alerts, and automated truck route dispatch.",
         architecture: "ESP32 Ultrasonic & Gas Sensors → Firebase Realtime DB → React Telemetry Dashboard → Automated Driver Route Trigger",
@@ -246,208 +247,11 @@ const projects = [
 ];
 
 /**
- * 3D Interactive Project Card with Cursor Spotlight Glow
- */
-function ProjectCard({ project, onSelect, index }) {
-    const CardIcon = project.icon;
-    const cardRef = useRef(null);
-
-    // Motion values for 3D Tilt
-    const mouseX = useMotionValue(0);
-    const mouseY = useMotionValue(0);
-
-    // Spring-damped rotation for butter-smooth movement
-    const rotateX = useSpring(useTransform(mouseY, [-120, 120], [8, -8]), { damping: 20, stiffness: 200 });
-    const rotateY = useSpring(useTransform(mouseX, [-120, 120], [-8, 8]), { damping: 20, stiffness: 200 });
-
-    // Cursor spotlight coordinates
-    const spotlightX = useMotionValue(0);
-    const spotlightY = useMotionValue(0);
-
-    const handleMouseMove = (e) => {
-        if (!cardRef.current) return;
-        const rect = cardRef.current.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        mouseX.set(x - rect.width / 2);
-        mouseY.set(y - rect.height / 2);
-        spotlightX.set(x);
-        spotlightY.set(y);
-    };
-
-    const handleMouseLeave = () => {
-        mouseX.set(0);
-        mouseY.set(0);
-    };
-
-    return (
-        <motion.div
-            ref={cardRef}
-            layout
-            initial={{ opacity: 0, scale: 0.9, y: 30 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            transition={{ duration: 0.45, delay: index * 0.04 }}
-            style={{
-                rotateX,
-                rotateY,
-                transformStyle: "preserve-3d",
-                perspective: 1000
-            }}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-            className="group relative flex flex-col rounded-3xl border border-slate-800/80 bg-slate-900/50 backdrop-blur-xl overflow-hidden h-full shadow-2xl transition-all duration-300 cursor-pointer"
-            onClick={() => onSelect(project)}
-        >
-            {/* Dynamic Cursor Spotlight Radial Glow */}
-            <motion.div
-                className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30"
-                style={{
-                    background: useTransform(
-                        [spotlightX, spotlightY],
-                        ([x, y]) => `radial-gradient(400px circle at ${x}px ${y}px, color-mix(in srgb, var(--color-accent) 22%, transparent), transparent 70%)`
-                    )
-                }}
-            />
-
-            {/* Glowing Border Spotlight on Hover */}
-            <motion.div
-                className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30"
-                style={{
-                    border: "1px solid var(--color-accent)",
-                    boxShadow: "0 0 30px color-mix(in srgb, var(--color-accent) 15%, transparent)"
-                }}
-            />
-
-            {/* Visual Header Mockup Area */}
-            <div className={`h-48 w-full bg-gradient-to-br ${project.gradient} relative overflow-hidden p-5 flex flex-col justify-between border-b border-slate-800/60`}>
-                {/* Subtle Grid Lines */}
-                <div
-                    className="absolute inset-0 opacity-15"
-                    style={{
-                        backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-                        backgroundSize: '24px 24px'
-                    }}
-                />
-
-                {/* Top Meta Bar */}
-                <div className="flex items-center justify-between relative z-10">
-                    <span className={`text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full border backdrop-blur-md ${project.badgeColor}`}>
-                        {project.status}
-                    </span>
-
-                    {project.featured && (
-                        <span className="flex items-center gap-1 text-[10px] font-bold px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-white shadow-md">
-                            <Sparkles size={11} style={{ color: "var(--color-accent)" }} />
-                            Featured
-                        </span>
-                    )}
-                </div>
-
-                {/* Central Graphic Symbol with 3D Depth */}
-                <div className="relative z-10 flex items-center justify-center my-auto transform-gpu group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-500">
-                    <div className="p-4 rounded-2xl bg-black/40 border border-white/10 backdrop-blur-md shadow-2xl group-hover:border-[color:var(--color-accent)]/50 transition-colors">
-                        <CardIcon size={38} style={{ color: "var(--color-accent)" }} />
-                    </div>
-                </div>
-
-                {/* Category & Action Hint */}
-                <div className="relative z-10 flex items-center justify-between text-[11px] text-slate-400 font-medium pt-2">
-                    <span>{project.category}</span>
-                    <span className="text-[10px] font-bold flex items-center gap-1 group-hover:text-white transition-colors" style={{ color: "var(--color-accent)" }}>
-                        Deep Dive <ChevronRight size={12} className="group-hover:translate-x-1 transition-transform" />
-                    </span>
-                </div>
-            </div>
-
-            {/* Content Body */}
-            <div className="p-6 flex-1 flex flex-col relative z-20">
-                <h3
-                    className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-[color:var(--color-accent)] transition-colors leading-snug"
-                >
-                    {project.title}
-                </h3>
-
-                {/* Quantified Metric Badge */}
-                <div className="mb-3.5">
-                    <span
-                        className="inline-flex items-center gap-1.5 text-[11px] font-bold px-2.5 py-1 rounded-lg border"
-                        style={{
-                            borderColor: "color-mix(in srgb, var(--color-accent) 25%, transparent)",
-                            color: "var(--color-accent)",
-                            backgroundColor: "color-mix(in srgb, var(--color-accent) 6%, transparent)"
-                        }}
-                    >
-                        <Activity size={12} />
-                        {project.metric}
-                    </span>
-                </div>
-
-                <p className="text-slate-400 leading-relaxed text-xs sm:text-sm mb-5 flex-1 font-light line-clamp-3">
-                    {project.description}
-                </p>
-
-                {/* Tags Preview */}
-                <div className="flex flex-wrap gap-1.5 mb-5">
-                    {project.tags.slice(0, 4).map(tag => (
-                        <span
-                            key={tag}
-                            className="text-[10px] px-2.5 py-0.5 rounded-md font-medium bg-slate-800/60 text-slate-300 border border-slate-700/50"
-                        >
-                            {tag}
-                        </span>
-                    ))}
-                    {project.tags.length > 4 && (
-                        <span className="text-[10px] px-1.5 py-0.5 rounded-md text-slate-500 bg-slate-800/40">
-                            +{project.tags.length - 4}
-                        </span>
-                    )}
-                </div>
-
-                {/* Action Links */}
-                <div
-                    className="flex items-center justify-between pt-4 border-t border-slate-800/50 mt-auto"
-                    onClick={(e) => e.stopPropagation()}
-                >
-                    <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-slate-400 hover:text-white transition-colors flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider group/btn"
-                    >
-                        <Github size={15} className="group-hover/btn:rotate-12 transition-transform" /> Source
-                    </a>
-                    {project.deploy ? (
-                        <a
-                            href={project.deploy}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{ color: "var(--color-accent)" }}
-                            className="flex items-center gap-1 text-xs font-bold uppercase tracking-[0.1em] hover:brightness-125 transition-all group/live"
-                        >
-                            Live Demo <ExternalLink size={13} className="group-hover/live:translate-x-0.5 group-hover/live:-translate-y-0.5 transition-transform" />
-                        </a>
-                    ) : (
-                        <button
-                            onClick={() => onSelect(project)}
-                            className="text-slate-500 hover:text-slate-300 text-[10px] font-bold uppercase tracking-widest flex items-center gap-1 transition-colors"
-                        >
-                            Architecture <Zap size={11} style={{ color: "var(--color-accent)" }} />
-                        </button>
-                    )}
-                </div>
-            </div>
-        </motion.div>
-    );
-}
-
-/**
  * Slide-Over Technical Deep-Dive Modal
  */
 function ProjectDeepDiveModal({ project, onClose }) {
     if (!project) return null;
-    const Icon = project.icon;
+    const Icon = project.icon || Layers;
 
     return (
         <AnimatePresence>
@@ -586,112 +390,343 @@ function ProjectDeepDiveModal({ project, onClose }) {
     );
 }
 
-export default function Projects() {
-    const [activeTab, setActiveTab] = useState("All");
-    const [selectedProject, setSelectedProject] = useState(null);
-
-    const filteredProjects = activeTab === "All"
-        ? projects
-        : projects.filter(p => p.category === activeTab);
+/**
+ * 2x2 Bento Grid Flagship Project Card
+ */
+function FlagshipBentoCard({ project, onSelect }) {
+    const Icon = project.icon || Layers;
 
     return (
-        <section id="projects" className="w-full py-24 px-6 md:px-12 relative">
-            <div className="max-w-6xl mx-auto flex flex-col items-center">
-                
-                {/* Section Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-center mb-12"
-                >
-                    <motion.div
-                        initial={{ scale: 0.9, opacity: 0 }}
-                        whileInView={{ scale: 1, opacity: 1 }}
-                        transition={{ duration: 0.5 }}
-                        className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-[0.2em] uppercase mb-4 border shadow-lg"
+        <motion.div
+            whileHover={{ y: -6 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="group relative flex flex-col justify-between rounded-3xl border border-slate-800/90 bg-slate-950/80 p-6 md:p-8 backdrop-blur-xl shadow-2xl hover:border-[color:var(--color-accent)]/50 hover:shadow-[0_15px_40px_rgba(0,0,0,0.7)] transition-all duration-300 overflow-hidden cursor-pointer"
+            onClick={() => onSelect(project)}
+        >
+            {/* Subtle Gradient Glow in Corner */}
+            <div
+                className="absolute top-0 right-0 w-64 h-64 rounded-full blur-[100px] opacity-10 group-hover:opacity-25 transition-opacity pointer-events-none"
+                style={{ backgroundColor: "var(--color-accent)" }}
+            />
+
+            {/* Card Header Top */}
+            <div className="relative z-10">
+                <div className="flex items-center justify-between mb-5">
+                    <div className="flex items-center gap-3">
+                        <div
+                            className="p-3 rounded-2xl bg-slate-900/90 border border-slate-800 group-hover:border-[color:var(--color-accent)]/40 transition-colors shadow-inner"
+                            style={{ color: "var(--color-accent)" }}
+                        >
+                            <Icon size={24} />
+                        </div>
+                        <span className={`text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full border backdrop-blur-md ${project.badgeColor}`}>
+                            {project.status}
+                        </span>
+                    </div>
+
+                    <span className="flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-full bg-slate-900/80 border border-slate-800 text-slate-300">
+                        <Sparkles size={11} style={{ color: "var(--color-accent)" }} />
+                        Flagship
+                    </span>
+                </div>
+
+                <h3 className="text-xl md:text-2xl font-black text-white mb-2 leading-tight group-hover:text-[color:var(--color-accent)] transition-colors">
+                    {project.title}
+                </h3>
+
+                {/* Metric Badge */}
+                <div className="mb-4">
+                    <span
+                        className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-lg border"
                         style={{
-                            borderColor: "color-mix(in srgb, var(--color-accent) 25%, transparent)",
+                            borderColor: "color-mix(in srgb, var(--color-accent) 30%, transparent)",
                             color: "var(--color-accent)",
                             backgroundColor: "color-mix(in srgb, var(--color-accent) 8%, transparent)"
                         }}
                     >
-                        <Sparkles size={13} />
-                        Interactive Showcase
-                    </motion.div>
-                    <h2 className="text-4xl md:text-5xl font-black text-white mb-5 tracking-tight">
-                        Featured <span style={{ color: "var(--color-accent)" }}>Projects</span>
-                    </h2>
-                    <p className="text-slate-400 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed mb-8 font-light">
-                        Explore 12 production-ready systems, computer vision models, and full-stack architectures. Hover for 3D tilt and click any card for architecture deep dives.
-                    </p>
+                        <Activity size={13} />
+                        {project.metric}
+                    </span>
+                </div>
 
-                    {/* Tactile Category Filter Tabs with LayoutId Animation */}
-                    <div className="flex flex-wrap justify-center gap-2 p-1.5 rounded-2xl bg-slate-900/80 border border-slate-800 backdrop-blur-xl max-w-2xl mx-auto shadow-2xl">
-                        {categories.map((cat) => {
-                            const isActive = activeTab === cat;
-                            const count = cat === "All" ? projects.length : projects.filter(p => p.category === cat).length;
-                            return (
-                                <button
-                                    key={cat}
-                                    onClick={() => setActiveTab(cat)}
-                                    className={`relative px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition-colors duration-200 flex items-center gap-2 z-10 ${
-                                        isActive ? "text-slate-950 font-bold" : "text-slate-400 hover:text-white"
-                                    }`}
-                                >
-                                    {isActive && (
-                                        <motion.div
-                                            layoutId="activeFilterTab"
-                                            className="absolute inset-0 rounded-xl shadow-lg"
-                                            style={{
-                                                backgroundColor: "var(--color-accent)",
-                                                boxShadow: `0 0 20px color-mix(in srgb, var(--color-accent) 40%, transparent)`
-                                            }}
-                                            transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
-                                        />
-                                    )}
-                                    <span className="relative z-10">{cat}</span>
-                                    <span
-                                        className={`relative z-10 text-[10px] px-1.5 py-0.5 rounded-md font-extrabold ${
-                                            isActive
-                                                ? "bg-black/20 text-slate-950"
-                                                : "bg-slate-800 text-slate-400"
-                                        }`}
-                                    >
-                                        {count}
-                                    </span>
-                                </button>
-                            );
-                        })}
+                <p className="text-slate-400 text-sm leading-relaxed font-light mb-6">
+                    {project.description}
+                </p>
+            </div>
+
+            {/* Card Bottom / Footer */}
+            <div className="relative z-10 pt-4 border-t border-slate-900 flex flex-col gap-4">
+                {/* Tech Tags */}
+                <div className="flex flex-wrap gap-1.5">
+                    {project.tags.map((tag) => (
+                        <span
+                            key={tag}
+                            className="text-[10px] font-semibold px-2.5 py-1 rounded-lg bg-slate-900/90 text-slate-300 border border-slate-800/80"
+                        >
+                            {tag}
+                        </span>
+                    ))}
+                </div>
+
+                {/* Action CTAs */}
+                <div className="flex items-center justify-between pt-2" onClick={(e) => e.stopPropagation()}>
+                    <button
+                        onClick={() => onSelect(project)}
+                        className="text-xs font-bold flex items-center gap-1.5 text-slate-300 hover:text-white transition-colors"
+                    >
+                        System Specs <ChevronRight size={14} style={{ color: "var(--color-accent)" }} />
+                    </button>
+
+                    <div className="flex items-center gap-2">
+                        <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition-colors"
+                            title="GitHub Source"
+                        >
+                            <Github size={15} />
+                        </a>
+                        {project.deploy && (
+                            <a
+                                href={project.deploy}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-3.5 py-1.5 rounded-xl text-slate-950 text-xs font-bold flex items-center gap-1.5 transition-all hover:brightness-110 shadow-md"
+                                style={{ backgroundColor: "var(--color-accent)" }}
+                            >
+                                Live App <ExternalLink size={12} />
+                            </a>
+                        )}
                     </div>
-                </motion.div>
+                </div>
+            </div>
+        </motion.div>
+    );
+}
 
-                {/* 3D Projects Grid with Staggered Animations */}
-                <motion.div
-                    layout
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full"
-                >
-                    <AnimatePresence mode="popLayout">
-                        {filteredProjects.map((project, i) => (
-                            <ProjectCard
-                                key={project.title}
+export default function Projects() {
+    const [activeTab, setActiveTab] = useState("All");
+    const [selectedProject, setSelectedProject] = useState(null);
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+    const flagshipProjects = projects.filter(p => p.featured);
+    
+    // For Drawer / All Projects section
+    const otherProjects = projects.filter(p => !p.featured);
+    const filteredOtherProjects = activeTab === "All"
+        ? otherProjects
+        : otherProjects.filter(p => p.category === activeTab);
+
+    return (
+        <ClickSpark
+            sparkColor="var(--color-accent, #ff7b00)"
+            sparkSize={12}
+            sparkRadius={18}
+            sparkCount={9}
+            duration={450}
+            easing="ease-out"
+        >
+            <section id="projects" className="w-full py-20 px-4 sm:px-6 md:px-12 relative overflow-hidden">
+                <div className="max-w-6xl mx-auto flex flex-col items-center">
+                    
+                    {/* Section Header */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 25 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-80px" }}
+                        transition={{ duration: 0.7, ease: "easeOut" }}
+                        className="text-center mb-12 w-full"
+                    >
+                        <div
+                            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-[0.2em] uppercase mb-4 border shadow-lg"
+                            style={{
+                                borderColor: "color-mix(in srgb, var(--color-accent) 25%, transparent)",
+                                color: "var(--color-accent)",
+                                backgroundColor: "color-mix(in srgb, var(--color-accent) 8%, transparent)"
+                            }}
+                        >
+                            <Sparkles size={13} />
+                            Interactive Portfolio Bento
+                        </div>
+
+                        <h2 className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight">
+                            Featured <span style={{ color: "var(--color-accent)" }}>Projects</span>
+                        </h2>
+                        
+                        <p className="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed font-light">
+                            Top 4 flagship AI, Computer Vision, and Cloud Systems featured below. Click anywhere for interactive particle sparks and select any card for architecture deep dives.
+                        </p>
+                    </motion.div>
+
+                    {/* 2x2 Bento Grid Layout for Flagship Projects */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full mb-12">
+                        {flagshipProjects.map((project) => (
+                            <FlagshipBentoCard
+                                key={project.id}
                                 project={project}
-                                index={i}
                                 onSelect={(p) => setSelectedProject(p)}
                             />
                         ))}
-                    </AnimatePresence>
-                </motion.div>
-            </div>
+                    </div>
 
-            {/* Interactive Technical Deep-Dive Modal */}
-            {selectedProject && (
-                <ProjectDeepDiveModal
-                    project={selectedProject}
-                    onClose={() => setSelectedProject(null)}
-                />
-            )}
-        </section>
+                    {/* Tabbed Drawer Button / Toggle */}
+                    <div className="w-full max-w-4xl flex flex-col items-center">
+                        <button
+                            onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+                            className="group flex items-center gap-3 px-6 py-3.5 rounded-2xl bg-slate-900/90 hover:bg-slate-900 border border-slate-800 hover:border-[color:var(--color-accent)]/50 text-white font-bold text-sm shadow-2xl transition-all"
+                        >
+                            <span>{isDrawerOpen ? "Collapse Other Projects" : `Explore All 12 Projects (${otherProjects.length} More Systems)`}</span>
+                            <div
+                                className="p-1 rounded-lg bg-slate-800 group-hover:bg-slate-700 transition-colors"
+                                style={{ color: "var(--color-accent)" }}
+                            >
+                                {isDrawerOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                            </div>
+                        </button>
+
+                        {/* Expandable Tabbed Drawer */}
+                        <AnimatePresence>
+                            {isDrawerOpen && (
+                                <motion.div
+                                    initial={{ opacity: 0, height: 0 }}
+                                    animate={{ opacity: 1, height: "auto" }}
+                                    exit={{ opacity: 0, height: 0 }}
+                                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                                    className="w-full overflow-hidden pt-8"
+                                >
+                                    {/* Category Filter Tabs inside Drawer */}
+                                    <div className="flex flex-wrap justify-center gap-1.5 p-1.5 rounded-2xl bg-slate-900/90 border border-slate-800 mb-8 max-w-2xl mx-auto">
+                                        {categories.map((cat) => {
+                                            const isActive = activeTab === cat;
+                                            const count = cat === "All" ? otherProjects.length : otherProjects.filter(p => p.category === cat).length;
+                                            return (
+                                                <button
+                                                    key={cat}
+                                                    onClick={() => setActiveTab(cat)}
+                                                    className={`relative px-3 sm:px-4 py-1.5 rounded-xl text-xs md:text-sm font-semibold transition-colors duration-200 flex items-center gap-1.5 z-10 ${
+                                                        isActive ? "text-slate-950 font-bold" : "text-slate-400 hover:text-white"
+                                                    }`}
+                                                >
+                                                    {isActive && (
+                                                        <motion.div
+                                                            layoutId="drawerFilterTab"
+                                                            className="absolute inset-0 rounded-xl shadow-lg"
+                                                            style={{
+                                                                backgroundColor: "var(--color-accent)",
+                                                                boxShadow: `0 0 20px color-mix(in srgb, var(--color-accent) 40%, transparent)`
+                                                            }}
+                                                            transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
+                                                        />
+                                                    )}
+                                                    <span className="relative z-10">{cat}</span>
+                                                    <span
+                                                        className={`relative z-10 text-[10px] px-1.5 py-0.5 rounded-md font-extrabold ${
+                                                            isActive
+                                                                ? "bg-black/20 text-slate-950"
+                                                                : "bg-slate-800 text-slate-400"
+                                                        }`}
+                                                    >
+                                                        {count}
+                                                    </span>
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
+
+                                    {/* Drawer Projects Grid */}
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                                        {filteredOtherProjects.map((project) => {
+                                            const CardIcon = project.icon || Layers;
+                                            return (
+                                                <div
+                                                    key={project.id || project.title}
+                                                    className="group flex flex-col justify-between rounded-3xl border border-slate-800/80 bg-slate-950/90 p-6 shadow-xl hover:border-[color:var(--color-accent)]/50 transition-all duration-300 cursor-pointer"
+                                                    onClick={() => setSelectedProject(project)}
+                                                >
+                                                    <div>
+                                                        <div className="flex items-center justify-between mb-4">
+                                                            <div
+                                                                className="p-2.5 rounded-xl bg-slate-900 border border-slate-800"
+                                                                style={{ color: "var(--color-accent)" }}
+                                                            >
+                                                                <CardIcon size={20} />
+                                                            </div>
+                                                            <span className={`text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full border ${project.badgeColor}`}>
+                                                                {project.status}
+                                                            </span>
+                                                        </div>
+
+                                                        <h4 className="text-base font-bold text-white mb-1.5 group-hover:text-[color:var(--color-accent)] transition-colors line-clamp-1">
+                                                            {project.title}
+                                                        </h4>
+
+                                                        <div className="mb-3">
+                                                            <span
+                                                                className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-md border"
+                                                                style={{
+                                                                    borderColor: "color-mix(in srgb, var(--color-accent) 25%, transparent)",
+                                                                    color: "var(--color-accent)",
+                                                                    backgroundColor: "color-mix(in srgb, var(--color-accent) 6%, transparent)"
+                                                                }}
+                                                            >
+                                                                <Activity size={11} />
+                                                                {project.metric}
+                                                            </span>
+                                                        </div>
+
+                                                        <p className="text-slate-400 text-xs leading-relaxed line-clamp-3 font-light mb-4">
+                                                            {project.description}
+                                                        </p>
+                                                    </div>
+
+                                                    <div className="pt-3 border-t border-slate-900 flex items-center justify-between" onClick={(e) => e.stopPropagation()}>
+                                                        <a
+                                                            href={project.github}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="text-slate-400 hover:text-white transition-colors flex items-center gap-1 text-xs font-bold uppercase tracking-wider"
+                                                        >
+                                                            <Github size={13} /> Source
+                                                        </a>
+
+                                                        {project.deploy ? (
+                                                            <a
+                                                                href={project.deploy}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                style={{ color: "var(--color-accent)" }}
+                                                                className="flex items-center gap-1 text-xs font-bold uppercase tracking-wider hover:brightness-125 transition-all"
+                                                            >
+                                                                Live <ExternalLink size={12} />
+                                                            </a>
+                                                        ) : (
+                                                            <button
+                                                                onClick={() => setSelectedProject(project)}
+                                                                className="text-slate-500 hover:text-slate-300 text-[10px] font-bold uppercase tracking-wider flex items-center gap-1 transition-colors"
+                                                            >
+                                                                Specs <Zap size={11} style={{ color: "var(--color-accent)" }} />
+                                                            </button>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
+                </div>
+
+                {/* Interactive Technical Deep-Dive Modal */}
+                {selectedProject && (
+                    <ProjectDeepDiveModal
+                        project={selectedProject}
+                        onClose={() => setSelectedProject(null)}
+                    />
+                )}
+            </section>
+        </ClickSpark>
     );
 }

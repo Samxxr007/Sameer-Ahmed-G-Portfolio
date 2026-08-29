@@ -101,23 +101,25 @@ export default function DynamicBackground() {
                 style={{ backgroundColor: "var(--color-accent)" }}
             />
 
-            {/* Top Waves */}
-            <DigitalWave top="-5%" opacity={0.25} duration={15} delay={0} />
-            <DigitalWave top="5%" opacity={0.15} duration={20} delay={2} flip />
+            {/* Top Waves - Disabled on small mobile for buttery 60fps scrolling */}
+            <div className="hidden md:block">
+                <DigitalWave top="-5%" opacity={0.25} duration={15} delay={0} />
+                <DigitalWave top="5%" opacity={0.15} duration={20} delay={2} flip />
+                <DigitalWave top="70%" opacity={0.2} duration={18} delay={1} />
+                <DigitalWave top="85%" opacity={0.12} duration={25} delay={3} flip />
+            </div>
 
-            {/* Bottom Waves */}
-            <DigitalWave top="70%" opacity={0.2} duration={18} delay={1} />
-            <DigitalWave top="85%" opacity={0.12} duration={25} delay={3} flip />
-
-            {/* Floating Revolving Toolkit Icons */}
-            <FloatingIcon icon={Code2} top="15%" left="8%" delay={0} duration={12} scrollYProgress={scrollYProgress} scrollRange={150} />
-            <FloatingIcon icon={Terminal} top="40%" left="82%" delay={2} duration={15} scrollYProgress={scrollYProgress} scrollRange={-100} />
-            <FloatingIcon icon={Cpu} top="75%" left="12%" delay={1} duration={14} scrollYProgress={scrollYProgress} scrollRange={250} />
-            <FloatingIcon icon={Database} top="25%" left="78%" delay={3} duration={16} scrollYProgress={scrollYProgress} scrollRange={-180} />
-            <FloatingIcon icon={Globe} top="65%" left="84%" delay={4} duration={13} scrollYProgress={scrollYProgress} scrollRange={140} />
-            <FloatingIcon icon={Layout} top="90%" left="35%" delay={2} duration={17} scrollYProgress={scrollYProgress} scrollRange={-120} />
-            <FloatingIcon icon={Blocks} top="55%" left="6%" delay={5} duration={19} scrollYProgress={scrollYProgress} scrollRange={200} />
-            <FloatingIcon icon={Binary} top="8%" left="55%" delay={1} duration={20} scrollYProgress={scrollYProgress} scrollRange={300} />
+            {/* Floating Toolkit Icons - Core 4 on Mobile, Full on Desktop */}
+            <FloatingIcon icon={Code2} top="15%" left="8%" delay={0} duration={12} scrollYProgress={scrollYProgress} scrollRange={120} />
+            <FloatingIcon icon={Terminal} top="40%" left="82%" delay={2} duration={15} scrollYProgress={scrollYProgress} scrollRange={-90} />
+            <FloatingIcon icon={Cpu} top="75%" left="12%" delay={1} duration={14} scrollYProgress={scrollYProgress} scrollRange={180} />
+            <FloatingIcon icon={Globe} top="65%" left="84%" delay={4} duration={13} scrollYProgress={scrollYProgress} scrollRange={110} />
+            <div className="hidden md:block">
+                <FloatingIcon icon={Database} top="25%" left="78%" delay={3} duration={16} scrollYProgress={scrollYProgress} scrollRange={-180} />
+                <FloatingIcon icon={Layout} top="90%" left="35%" delay={2} duration={17} scrollYProgress={scrollYProgress} scrollRange={-120} />
+                <FloatingIcon icon={Blocks} top="55%" left="6%" delay={5} duration={19} scrollYProgress={scrollYProgress} scrollRange={200} />
+                <FloatingIcon icon={Binary} top="8%" left="55%" delay={1} duration={20} scrollYProgress={scrollYProgress} scrollRange={300} />
+            </div>
 
             {/* Technical Grid Overlay */}
             <div

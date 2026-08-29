@@ -2,8 +2,8 @@ import { createContext, useContext, useState, useEffect } from "react";
 
 // Predefined modern color themes
 export const THEMES = [
-    { id: "default-gold", name: "Default Gold", color: "#EAB308", hsl: "45 93% 47%" },
     { id: "ocean-blue", name: "Ocean Blue", color: "#0EA5E9", hsl: "199 89% 48%" },
+    { id: "default-gold", name: "Warm Gold", color: "#EAB308", hsl: "45 93% 47%" },
     { id: "rose-pink", name: "Rose Pink", color: "#F43F5E", hsl: "349 89% 60%" },
     { id: "emerald-green", name: "Emerald Green", color: "#10B981", hsl: "160 84% 39%" },
     { id: "royal-purple", name: "Royal Purple", color: "#A855F7", hsl: "271 91% 65%" },

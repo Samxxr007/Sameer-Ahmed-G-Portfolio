@@ -7,8 +7,8 @@
 }
 
 :root {
-  --color-accent: #EAB308;
-  --color-accent-hsl: 45 93% 47%;
+  --color-accent: #0EA5E9;
+  --color-accent-hsl: 199 89% 48%;
 }
 
 @layer base {
