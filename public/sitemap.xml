@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://sameer-ahmed-g-portfolio.vercel.app/</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>always</changefreq>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://sameer-ahmed-g-portfolio.vercel.app/sameer-ahmed-g.jpg</image:loc>
+      <image:title>Sameer Ahmed G</image:title>
+      <image:caption>Sameer Ahmed G - React Native Developer &amp; Full Stack Software Engineer</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sameer-ahmed-g-portfolio.vercel.app/profile.jpg</image:loc>
+      <image:title>Sameer Ahmed G Portfolio Profile</image:title>
+      <image:caption>Sameer Ahmed G</image:caption>
+    </image:image>
   </url>
 </urlset>
