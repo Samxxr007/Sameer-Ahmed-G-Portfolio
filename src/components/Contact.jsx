@@ -294,7 +294,7 @@ function SocialCard({ icon, label, value, link }) {
         <motion.a
             href={link}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer me"
             variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 }
