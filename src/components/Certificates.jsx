@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState, useCallback } from "react";
 import { motion } from "framer-motion";
-import { Award, CheckCircle2, ChevronLeft, ChevronRight, Camera } from "lucide-react";
+import { Award, CheckCircle2, ChevronLeft, ChevronRight, Camera, ExternalLink } from "lucide-react";
 
 // Image Imports
 import nvidiaImg from "../assets/certificates/nvidia.jpg";
@@ -61,6 +61,7 @@ const certificates = [
         date: "July 2025",
         image: corizoTrainImg,
         verified: true,
+        credentialUrl: "https://credentials.corizo.in/credential/a13bc29d-3986-448b-a461-6b773f18b772"
     }
 ];
 
@@ -177,10 +178,24 @@ export default function Certificates() {
                                         />
 
                                         {/* Verified Badge */}
-                                        <div className="absolute top-6 left-6 flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl">
-                                            <CheckCircle2 size={12} className="text-emerald-400" />
-                                            <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-white">Verified</span>
-                                        </div>
+                                        {cert.credentialUrl ? (
+                                            <a
+                                                href={cert.credentialUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer me"
+                                                className="absolute top-6 left-6 flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/70 hover:bg-emerald-500/20 backdrop-blur-xl border border-emerald-500/40 hover:border-emerald-400 shadow-2xl transition-all group/badge"
+                                                title="View official credential"
+                                            >
+                                                <CheckCircle2 size={12} className="text-emerald-400" />
+                                                <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-white">Verified</span>
+                                                <ExternalLink size={10} className="text-emerald-400 group-hover/badge:translate-x-0.5 transition-transform" />
+                                            </a>
+                                        ) : (
+                                            <div className="absolute top-6 left-6 flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl">
+                                                <CheckCircle2 size={12} className="text-emerald-400" />
+                                                <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-white">Verified</span>
+                                            </div>
+                                        )}
                                     </div>
 
                                     {/* Content Section - Clear below the image */}
@@ -209,12 +224,22 @@ export default function Certificates() {
                                                     {cert.date}
                                                 </span>
                                             </div>
-                                            {cert.score && (
+                                            {cert.score ? (
                                                 <div className="text-right">
                                                     <span className="text-[10px] uppercase font-bold text-emerald-500/60 tracking-widest mb-1 block">Score</span>
                                                     <span className="text-xs font-black text-emerald-400 uppercase tracking-widest">{cert.score}</span>
                                                 </div>
-                                            )}
+                                            ) : cert.credentialUrl ? (
+                                                <a
+                                                    href={cert.credentialUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer me"
+                                                    className="inline-flex items-center gap-1 text-[11px] font-bold text-sky-400 hover:text-sky-300 hover:underline transition-colors"
+                                                >
+                                                    <span>Credential</span>
+                                                    <ExternalLink size={11} />
+                                                </a>
+                                            ) : null}
                                         </div>
                                     </div>
                                 </div>
